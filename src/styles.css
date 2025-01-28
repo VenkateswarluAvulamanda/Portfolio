@@ -162,7 +162,6 @@ body {
    display: grid;
    grid-template-columns: repeat(2, 1fr);
    align-items: center;
-   height: 100vh;
 }
 .about-img{
    padding-bottom: 20%;
@@ -699,7 +698,7 @@ color: #0ef;
         font-size: 18px;
     }
     #education {
-        margin-top: 50px;
+        margin-top: 30px;
     }
     .sub-title {
         font-size: 45px;
@@ -716,6 +715,9 @@ color: #0ef;
     }
     .navbar.active {
         display: flex;
+    }
+    #about{
+      margin-bottom: 30px;
     }
     .navbar a {
         font-size: 22px;
@@ -744,13 +746,16 @@ color: #0ef;
         padding: 10px;
         margin: 20px;
     }
+    #about{
+      margin-bottom: 30px;
+    }
     .about-img img {
         width: 80%;
         margin-left: 0;
         margin-top: 0;
     }
     #education {
-        margin-top: 50px;
+        margin-top: 30px;
     }
      .hamburger {
         display: flex;
