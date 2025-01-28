@@ -27,12 +27,17 @@ body {
    color: #fff;
    text-decoration: none;
    font-weight: 600;
-   cursor: default;
+   cursor: pointer;
    opacity: 0;
    animation: slideRight 1s ease forwards;
 }
 .logo span{
    color: #0ef;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
 }
 .navbar a {
    display: inline-block;
@@ -48,6 +53,19 @@ body {
 }
 .navbar a:hover {
    color: #0ef;
+}
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+.hamburger span {
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
 }
 /* Home styles */
 .home {
@@ -130,6 +148,7 @@ body {
    opacity: 0;
    animation: slideTop 1s ease forwards;
    animation-delay: 2s;
+   
 }
 .btn button:hover{
    background: #081b29;
@@ -417,7 +436,7 @@ color: #0ef;
       width: 70%;
    }
 }
-/* Project styles */
+ /* Project styles */
 .main-text{
    padding-top: 130px;
    margin-top: 200px;
@@ -446,6 +465,8 @@ color: #0ef;
    border-radius: 8px;
    display: block;
    transition: transform 0.5s;
+   height: 300px;
+   width:500px;
 }
 .layer{
    width: 100%;
@@ -657,4 +678,87 @@ color: #0ef;
       transform: translateY(0px);
       opacity: 1;
    }
+}
+@media (max-width: 768px) {
+    .about {
+        grid-template-columns: 1fr;
+        padding: 50px 5%;
+        margin-bottom: 50px;
+    }
+    .about-img {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+    .about-text h2 {
+        font-size: 45px;
+    }
+    .about-text h4 {
+        font-size: 18px;
+    }
+    .about-text p {
+        font-size: 18px;
+    }
+    #education {
+        margin-top: 50px;
+    }
+    .sub-title {
+        font-size: 45px;
+        padding-bottom: 40px;
+    }
+    .navbar {
+        position: absolute;
+        top: 60px;
+        right: 10%;
+        background-color: #030917;
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+    .navbar.active {
+        display: flex;
+    }
+    .navbar a {
+        font-size: 22px;
+        margin: 20px 0;
+        text-align: center;
+    }
+    .hamburger {
+        display: flex;
+    }
+}
+@media (max-width: 480px) {
+    .about-text h2 {
+        font-size: 35px;
+    }
+    .about-text h4 {
+        font-size: 16px;
+    }
+    .about-text p {
+        font-size: 16px;
+    }
+    .home-content h1 {
+        font-size: 25px;
+    }
+    .about {
+        flex-direction: column;
+        padding: 10px;
+        margin: 20px;
+    }
+    .about-img img {
+        width: 80%;
+        margin-left: 0;
+        margin-top: 0;
+    }
+    #education {
+        margin-top: 50px;
+    }
+     .hamburger {
+        display: flex;
+    }
+    .contact-form {
+      display: none;
+    }
+    .contact-text h2{
+      font-size: 35px;
+    }
 }
