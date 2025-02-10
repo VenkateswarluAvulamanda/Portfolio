@@ -5,6 +5,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Portfolio</title>
    <link rel="stylesheet" href="./src/styles.css">
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 </head>
@@ -20,10 +21,10 @@
          <a href="#project" style="--i:5">Projects</a>
          <a href="#contact" style="--i:6">Contact</a>
       </nav>
-      <div class="hamburger" id="hamburger" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+      <div class="menu-icon" onclick="toggleMenu()">
+         <span class="bar"></span>
+         <span class="bar"></span>
+         <span class="bar"></span>
       </div>
    </header>
    <!-- Home Section  -->
@@ -89,7 +90,7 @@
    </section>
  <!-- Skills Section  -->
  <section id="skills">
-   <h1 class="sub-title" >My <span>Skills</span></h1>
+   <h1 class="sub-title">My <span>Skills</span></h1>
    <div class="skills-container">
       <div class="skills">
          <h1>Frontend Skills</h1>
@@ -154,7 +155,7 @@
    <section>
             <div id="project">
                 <div class="main-text">
-                    <h2>My <span>Projects</span></h2>
+                    <h2 class="sub-title">My <span>Projects</span></h2>
                     <div class="project-content">
                         <div class="row">
                             <img src="./public/images/e-commerce.jpg"  height="300px" width="500px" alt="img">
@@ -200,7 +201,7 @@
         <!-- Contact Section  -->
         <section class="contact" id="contact">
             <div class="contact-text">
-                <h2>Contact <span>Me</span></h2>
+                <h2 class="sub-title">Contact <span>Me</span></h2>
                 <h4>Let's work together</h4>
                 <p>
                     Thank you for taking the time to explore my portfolio. If you would like to discuss potential opportunities, collaborations, or have any inquiries, please feel free to reach out. I look forward to connecting with you.
@@ -232,5 +233,19 @@
             <p>Developed by Venkateswarlu &copy;2025</p>
         </footer>
    <script src="./src/script.js"></script>
+   <script>
+      function toggleMenu() {
+      const navbar = document.querySelector('.navbar');
+      navbar.classList.toggle('active');
+   }
+   const menuLinks = document.querySelectorAll('.navbar a');
+      menuLinks.forEach(link => {
+         link.addEventListener('click', () => {
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.remove('active');  // Close the menu
+         });
+      });
+
+   </script>
 </body>
 </html>
